@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/icon.png">
+    <link rel="stylesheet" href="./styleStart.css">
+    <title>Wheel of Fortune</title>
+</head>
+<body>
+
+    <div class="test">
+        <div class="background_background__3Oeal">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>  
+
+    <div class="container">
+        <div class="content">
+            <h1 class="header">
+                Добро пожаловать на Поле Чудес!
+            </h1>
+            <h3 class="reasons">
+                Мои поздравления! Если ты здесь, значит:
+            </h3>
+            <ul class="reasons-list">
+                <li class="reasons-item">
+                    у тебя нет претензий за прошлый месяц
+                </li>
+                <li class="reasons-item">
+                    твой процент времени на паузе не превысил 15%
+                </li>
+                <li class="reasons-item">
+                    у тебя нет невыходов и опозданий
+                </li>
+                <li class="reasons-item">
+                    у тебя отсутствуют отклонения по показателю продажи в аудите
+                </li>
+            </ul>
+            <h3 class="introduction">
+                Всё это безусловно заслуживает уважения и даёт тебе право назвать себя Безупречным оператором! Но достаточно ли ограничиться одной лишь похвалой?
+            </h3>
+            <h2 class="description">
+                Мы подготовили для тебя несколько призов, но определить, какой именно достанется тебе, поможет Колесо Фортуны!
+            </h2>
+            <div class="content-action">
+                <p class="content-action-description">Нажми, чтобы продолжить</p>
+                <a href="./main.html" onclick="url=this.href;setTimeout('location.href=url',3000);this.href='javascript:void(0)';" class="btn">Испытать удачу!</a>
+                <div class="loader">
+                    <div class="inner one"></div>
+                    <div class="inner two"></div>
+                    <div class="inner three"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let btn = document.querySelector('.btn');
+        let actionDescription = document.querySelector('.content-action-description');
+        let loader = document.querySelector('.loader');
+
+        btn.addEventListener('click', () => {
+            actionDescription.style.display = "none";
+            btn.classList.add('btn-remove');
+            setTimeout("loader.classList.add('loader-block')", 300);
+        });
+    </script>
+</body>
+</html>

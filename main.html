@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./style.css">
+    <title>Wheel of Fortune</title>
+</head>
+<body>
+
+    <div class="test">
+        <div class="background_background__3Oeal">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    
+    <div class="loader">
+        <div class="inner one"></div>
+        <div class="inner two"></div>
+        <div class="inner three"></div>
+    </div>
+
+    <div class="container">
+        <h1 class="heading">А вот и Колесо Фортуны! Вращайте барабан!</h1>
+        <h3 class="description">Нажми на кнопку с логотипом Суши Wok в центре барабана, чтобы запустить его.</h3>
+        <div class="background-body">
+            <button id="spin"></button>
+            <span class="arrow"></span>
+            <div class="spin-container">
+                <div class="one">?</div> 
+                <div class="two">?</div>
+                <div class="three">?</div>
+                <div class="four">?</div>
+                <div class="five">?</div>
+                <div class="six">?</div>
+                <div class="seven">?</div>
+                <div class="eight">?</div>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="popup-content">
+                <a href="./final.html" class="close-btn animate__animated animate__delay-1s animate__infinite animate__heartBeat"></a>
+                <div class="text-content">
+                    <p class="message-header">Поздравляю!</p>
+                    <div class="message-content">
+                        <p class="message-fixed">Твой приз: </p>
+                        <p class="message"></p>
+                    </div>
+                    
+                    <p class="message-description">Чтобы воспользоваться призом, введи ФИО и отправь сообщение. Оно поступит супервайзерам автоматически.</p>
+                </div>
+                <form id="tg" class="form">
+                    <label for="name" class="label">Введи ФИО: </label>
+                    <input autocomplete="off" minlength="5" required type="text" name="name" placeholder="Фамилия, имя и отчество*" class="input" id="name">
+                    <label for="textarea" class="label">Мой приз: </label>
+                    <textarea name="textarea" disabled cols="30" rows="4" placeholder="Мой приз - " class="input textarea"></textarea>
+        
+                    <div id="success" class="alert animate__animated animate__delay-0.3s"></div>
+        
+                    <div class="form-action">
+                            <button type="submit" class="popup-btn animate__animated animate__delay-0.5s">
+                                Отправить сообщение
+                            </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <script src="./main.js"></script>
+</body>
+</html>
