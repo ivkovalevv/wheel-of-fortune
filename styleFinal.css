@@ -322,3 +322,32 @@ p{
           transform: translateZ(1px) rotate(1turn)
       }
   }
+
+/* BRAKEPOINTS */
+
+@media (max-width: 576px){
+    .test{
+        min-width: 100% !important;
+        height: 750px;
+    }
+
+    .container{
+        min-width: 100% !important;
+        width: 100% !important;
+        min-height: 100% !important;
+    }
+
+    .content{
+        min-width: 90% !important;
+        width: 90% !important;
+        text-align: left;
+    }
+
+    .speech, .farewell{
+        max-width: 100% !important;
+    }
+
+    .farewell{
+        font-size: 24px !important;
+    }
+}

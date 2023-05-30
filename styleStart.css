@@ -62,11 +62,6 @@ p{
     font-weight: normal;
 }
 
-.reasons-list{
-    margin-left: 15px;
-    margin-bottom: 40px;
-}
-
 .introduction{
     width: 900px;
     margin-bottom: 60px;
@@ -473,3 +468,39 @@ to {
           transform: translateZ(1px) rotate(1turn)
       }
   }
+
+/* BRAKEPOINTS */
+
+@media (max-width: 576px){
+    .test{
+        min-width: 100% !important;
+        height: 750px;
+    }
+
+    .container{
+        min-width: 100% !important;
+        width: 100% !important;
+        min-height: 100% !important;
+    }
+
+    .content{
+        min-width: 90% !important;
+        width: 90% !important;
+        text-align: left;
+    }
+
+    .introduction{
+        min-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .description, .content-action{
+        min-width: 100% !important;
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .loader{
+        left: 30% !important;
+    }
+}

@@ -741,3 +741,84 @@ to {
           transform: translateZ(1px) rotate(1turn)
       }
   }
+
+/* BRAKEPOINTS */
+
+@media (max-width: 576px){
+    body{
+        max-height: 750px !important;
+    }
+    .test{
+        min-width: 100% !important;
+        height: 750px;
+    }
+
+    .container{
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .heading{
+        min-width: 95% !important;
+        width: 95% !important;
+        text-align: center;
+    }
+
+    .description{
+        min-width: 95% !important;
+        width: 95% !important;
+        text-align: center;
+    }
+
+    .background-body{
+        height: 500px !important;
+    }
+
+    .spin-container{
+        width: 350px !important;
+        height: 350px !important;
+    }
+
+    .spin-container div{
+        height: 50%;
+        width: 133px !important;
+        left: 94px !important;
+    }
+
+    .spin-container .one{
+        left: 50% !important;
+    }
+
+    .active{
+        width: 90% !important;
+        height: 570px !important;
+    }
+
+    .popup-content{
+        min-width: 100% !important;
+    }
+
+    .form{
+        max-width: 100% !important;
+    }
+
+    .input{
+        min-width: 100% !important;
+    }
+
+    .alert{
+        max-width: 100% !important;
+        min-width: 100% !important;
+    }
+
+    .close-btn{
+        top: -3.5%;
+        right: -7.5% !important;
+    }
+
+    .loader {
+        left: 25%;
+        width: 200px !important;
+        height: 200px !important;
+    }
+}
