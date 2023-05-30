@@ -46,27 +46,13 @@ closeBtn.onclick = function () {
     this.href='javascript:void(0)';
 }
 
-/* testBtn */
-
-/* document.getElementById('tg').addEventListener('submit', function(e) {
-    e.preventDefault();
-});
-
-submitBtn.onclick = function (){
-    success.innerHTML = "Сообщение отправлено!";
-    submitBtn.classList.add('animate__zoomOut'); 
-    setTimeout("success.classList.add('alert-block')", 1700);
-    setTimeout("success.classList.add('animate__zoomIn')", 1700);
-    setTimeout("closeBtn.classList.add('close-btn-active')", 3500);
-} */
-
 /* Message TG */
 document.getElementById('tg').addEventListener('submit', function(e) {
     e.preventDefault();
 
     let message = `<b>У нас есть победитель!</b>\n`;
     message += `<b>Оператор: </b> ${ this.name.value }\n`;
-    message += `<b>Приз: </b> ${ this.textarea.value }`;
+    message += `<b>Приз: </b> ${ document.querySelector('.textarea').textContent }`;
     
     axios.post(URI_API, {
         chat_id: CHAT_ID,
@@ -75,11 +61,10 @@ document.getElementById('tg').addEventListener('submit', function(e) {
     })
     .then((res) => {
         this.name.value = "";
-        this.textarea.value = "";
+        document.querySelector('.textarea').textContent = "";
         success.innerHTML = "Сообщение отправлено!";
-        submitBtn.classList.add('animate__zoomOut'); 
+        submitBtn.classList.add('btn-remove');
         setTimeout("success.classList.add('alert-block')", 1700);
-        setTimeout("success.classList.add('animate__zoomIn')", 1700);
         setTimeout("closeBtn.classList.add('close-btn-active')", 3500);  
     })
     .catch((err) => {

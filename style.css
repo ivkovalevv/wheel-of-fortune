@@ -228,16 +228,23 @@ p{
 
 .arrow{
     position: absolute;
-    top: 1%;
-    left: 50%;
+    top: 3%;
+    left: 48.5%;
     transform: translateX(-50%);
     color: #840404;
     z-index: 11;
 }
 
 .arrow::before{
-    content: '\1F817';
+    content: '';
+    width: 40px;
+    height: 40px;
+    position: absolute;
     font-size: 50px;
+    background-image: url(./img/svg/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
 }
 
 #spin{
@@ -480,6 +487,13 @@ p{
 
 .popup-btn:hover::before {
     animation: moveLight 1s;
+}
+
+.btn-remove{
+    width: 0px;
+    padding: 0px;
+    color: #db0404;
+    opacity: 0;
 }
 
          @keyframes moveLight {
@@ -750,7 +764,7 @@ to {
         max-width: 100% !important;
     }
     .test{
-        min-width: 100% !important;
+        max-width: 100% !important;
         height: 750px;
     }
 
@@ -772,6 +786,7 @@ to {
     }
 
     .background-body{
+        max-width: 100% !important;
         height: 500px !important;
     }
 
@@ -790,6 +805,10 @@ to {
         left: 50% !important;
     }
 
+    .arrow{
+        left: 45% !important;
+    }
+
     .active{
         width: 90% !important;
         height: 570px !important;
@@ -801,10 +820,15 @@ to {
 
     .form{
         max-width: 100% !important;
+        width: 100% !important;
     }
 
     .input{
         min-width: 100% !important;
+    }
+
+    .popup-btn{
+        width: 100% !important;
     }
 
     .alert{
