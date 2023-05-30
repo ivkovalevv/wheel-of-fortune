@@ -30,7 +30,7 @@ btn.onclick = function () {
 
 btn.addEventListener('click', () => {
     btn.disabled = btn.onclick;
-    setTimeout("popup.classList.add('active')", 1500); /* 14500 */
+    setTimeout("popup.classList.add('active')", 14500);
 });
 
 function randomPrize (){
