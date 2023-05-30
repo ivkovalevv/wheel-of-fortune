@@ -747,6 +747,7 @@ to {
 @media (max-width: 576px){
     body{
         max-height: 750px !important;
+        max-width: 100% !important;
     }
     .test{
         min-width: 100% !important;
