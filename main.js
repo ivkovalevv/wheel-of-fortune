@@ -65,9 +65,7 @@ document.getElementById('tg').addEventListener('submit', function(e) {
         this.name.disabled = true
         success.innerHTML = "Сообщение отправлено!";
         submitBtn.classList.add('btn-remove');
-        setTimeout(() =>{
-            submitBtn.parentNode.removeChild(submitBtn)
-            }, 2000)
+        setTimeout("submitBtn.parentNode.removeChild(submitBtn)", 2000)
         setTimeout("success.classList.add('alert-block')", 1700);
         setTimeout("closeBtn.classList.add('close-btn-active')", 3000);  
     })
