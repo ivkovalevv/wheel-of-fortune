@@ -60,10 +60,12 @@ document.getElementById('tg').addEventListener('submit', function(e) {
         text: message 
     })
     .then((res) => {
-        this.name.value = "";
-        document.querySelector('.textarea').textContent = "";
+        /* this.name.value = "";
+        document.querySelector('.textarea').textContent = ""; */
+        this.name.disabled = true
         success.innerHTML = "Сообщение отправлено!";
         submitBtn.classList.add('btn-remove');
+        submitBtn.parentNode.removeChild(submitBtn)
         setTimeout("success.classList.add('alert-block')", 1700);
         setTimeout("closeBtn.classList.add('close-btn-active')", 3500);  
     })
