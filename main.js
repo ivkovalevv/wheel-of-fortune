@@ -13,8 +13,8 @@ let container = document.querySelector('.container');
 let loader = document.querySelector('.loader');
 
 /* Message TG */
-const TOKEN = "6228022982:AAHyXdWb1OSkxdtmvESSt5sgQEm4WCRwmC0"; /* 5622772998:AAFnLU5B688CN94dVpuIcXIj38mlDX_76Jk */ 
-const CHAT_ID = "-1001875662852";  /* -1001628030640 */ 
+const TOKEN = "5622772998:AAFnLU5B688CN94dVpuIcXIj38mlDX_76Jk"; /* 5622772998:AAFnLU5B688CN94dVpuIcXIj38mlDX_76Jk */ 
+const CHAT_ID = "-1001628030640";  /* -1001628030640 */ 
 const URI_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
 const success = document.getElementById('success');
 
