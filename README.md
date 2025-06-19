@@ -1,7 +1,7 @@
 # 🎡 Wheel of Fortune - Колесо Фортуны для сотрудников
 
-[![Демо](https://img.shields.io/badge/-ДЕМО-FF6384?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ivkovalevv.github.io/wheeloffortune/)
-[![Исходники](https://img.shields.io/badge/-ИСХОДНИКИ-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ivkovalevv/wheeloffortune)
+[![Демо](https://img.shields.io/badge/-ДЕМО-FF6384?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ivkovalevv.github.io/wheel-of-fortune/)
+[![Исходники](https://img.shields.io/badge/-ИСХОДНИКИ-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ivkovalevv/wheel-of-fortune)
 
 Интерактивное колесо призов для мотивации лучших операторов компании - реально используемый функционал в действующем колл-центре.
 
