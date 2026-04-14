@@ -13,10 +13,10 @@ let container = document.querySelector('.container');
 let loader = document.querySelector('.loader');
 
 /* Message TG */
-const TOKEN = "5622772998:AAFnLU5B688CN94dVpuIcXIj38mlDX_76Jk"; /* 5622772998:AAFnLU5B688CN94dVpuIcXIj38mlDX_76Jk */ 
-const CHAT_ID = "-1001628030640";  /* -1001628030640 */ 
+/* const TOKEN = "5622772998:AAFnLU5B688CN94dVpuIcXIj38mlDX_76Jk";
+const CHAT_ID = "-1001628030640";
 const URI_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
-const success = document.getElementById('success');
+const success = document.getElementById('success'); */
 
 
 /* Fortune While */
@@ -30,7 +30,7 @@ btn.onclick = function () {
 
 btn.addEventListener('click', () => {
     btn.disabled = btn.onclick;
-    setTimeout("popup.classList.add('active')", 14500);
+    setTimeout("popup.classList.add('active')", 50 /* 14500 */);
 });
 
 function randomPrize (){
@@ -50,18 +50,44 @@ closeBtn.onclick = function () {
 document.getElementById('tg').addEventListener('submit', function(e) {
     e.preventDefault();
 
-    let message = `<b>У нас есть победитель!</b>\n`;
-    message += `<b>Оператор: </b> ${ this.name.value }\n`;
-    message += `<b>Приз: </b> ${ document.querySelector('.textarea').textContent }`;
+    emailjs
+      .send(
+        'wheel_of_fortune',
+        'whell_of_fortune_temp',
+        {
+          to_email: "ivkovalevv@gmail.com",
+          winner: this.name.value,
+          date: new Date().toLocaleDateString('ru-RU', {
+            day: 'numeric',
+            month: 'long', 
+            year: 'numeric'
+        }),
+          prize_name: document.querySelector('.textarea').textContent,
+        },
+        "6xewHig9R5Uzd5OeD"
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+          this.name.disabled = true
+        success.innerHTML = "Сообщение отправлено!";
+        submitBtn.classList.add('btn-remove');
+        setTimeout("submitBtn.parentNode.removeChild(submitBtn)", 2000)
+        setTimeout("success.classList.add('alert-block')", 1700);
+        setTimeout("closeBtn.classList.add('close-btn-active')", 3000);
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          alert("Ошибка отправки!");
+        }
+      );
     
-    axios.post(URI_API, {
+    /* axios.post(URI_API, {
         chat_id: CHAT_ID,
         parse_mode: 'html',
         text: message 
     })
     .then((res) => {
-        /* this.name.value = "";
-        document.querySelector('.textarea').textContent = ""; */
         this.name.disabled = true
         success.innerHTML = "Сообщение отправлено!";
         submitBtn.classList.add('btn-remove');
@@ -74,5 +100,5 @@ document.getElementById('tg').addEventListener('submit', function(e) {
     })
     .finally(() => {
         console.log('Конец');
-    })
+    }) */
 })
