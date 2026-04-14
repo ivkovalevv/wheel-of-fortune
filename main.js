@@ -30,7 +30,7 @@ btn.onclick = function () {
 
 btn.addEventListener('click', () => {
     btn.disabled = btn.onclick;
-    setTimeout("popup.classList.add('active')", 50 /* 14500 */);
+    setTimeout("popup.classList.add('active')", 12500);
 });
 
 function randomPrize (){
@@ -55,7 +55,7 @@ document.getElementById('tg').addEventListener('submit', function(e) {
         'wheel_of_fortune',
         'whell_of_fortune_temp',
         {
-          to_email: "ivkovalevv@gmail.com",
+          to_email: "iraiskandyarova@yandex.ru",
           winner: this.name.value,
           date: new Date().toLocaleDateString('ru-RU', {
             day: 'numeric',
