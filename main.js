@@ -55,7 +55,7 @@ document.getElementById('tg').addEventListener('submit', function(e) {
         'wheel_of_fortune',
         'whell_of_fortune_temp',
         {
-          to_email: "iraiskandyarova@yandex.ru",
+          to_email: "ao.cc@mixfood.ru",
           winner: this.name.value,
           date: new Date().toLocaleDateString('ru-RU', {
             day: 'numeric',
