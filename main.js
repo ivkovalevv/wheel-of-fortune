@@ -55,7 +55,8 @@ document.getElementById('tg').addEventListener('submit', function(e) {
         'wheel_of_fortune',
         'whell_of_fortune_temp',
         {
-          to_email: "ao.cc@mixfood.ru",
+          to_email: 'ao.cc@mixfood.ru',
+          cc_emails: 'i.izotova@mixfood.ru, s.shelenkova@mixfood.ru, st.ao.cc@mixfood.ru',
           winner: this.name.value,
           date: new Date().toLocaleDateString('ru-RU', {
             day: 'numeric',
@@ -64,7 +65,7 @@ document.getElementById('tg').addEventListener('submit', function(e) {
         }),
           prize_name: document.querySelector('.textarea').textContent,
         },
-        "6xewHig9R5Uzd5OeD"
+        '6xewHig9R5Uzd5OeD'
       )
       .then(
         (result) => {
