@@ -56,7 +56,7 @@ document.getElementById('tg').addEventListener('submit', function(e) {
         'whell_of_fortune_temp',
         {
           to_email: 'ao.cc@mixfood.ru',
-          cc_emails: 'i.izotova@mixfood.ru, s.shelenkova@mixfood.ru, st.ao.cc@mixfood.ru',
+          cc_emails: 'i.izotova@mixfood.ru, s.shelenkova@mixfood.ru, a.gapanovich@mixfood.ru, st.ao.cc@mixfood.ru',
           winner: this.name.value,
           date: new Date().toLocaleDateString('ru-RU', {
             day: 'numeric',
